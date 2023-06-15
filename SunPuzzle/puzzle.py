@@ -51,7 +51,7 @@ class SunPuzzleCmdLine:
             else:
                 rep_colours = [col for col in cur_colours if cur_colours[col] > 1 and col != "grey"]
                 if len(rep_colours) == 0:
-                    rep_colours = [col for col in cur_colours if cur_colours[col] == 1 and col != "grey"][0]
+                    rep_colours = [col for col in cur_colours if cur_colours[col] == 1 and col != "grey"]
                     cur_state[7] = choice(rep_colours)
                 else:
                     cur_state[7] = choice(rep_colours)
