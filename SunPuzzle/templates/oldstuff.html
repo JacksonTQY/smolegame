@@ -1,0 +1,52 @@
+ <!--$( document ).ready(function() {-->
+<!--    $('#PanelB').click(function() {-->
+<!--        $.ajax({-->
+<!--           url: "{{ url_for ('b') }}",-->
+<!--           type: "GET",-->
+<!--           success: function(response) {-->
+<!--               $("#myimg").attr('src', '/static/' + response);-->
+<!--           }-->
+<!--        });-->
+<!--    });-->
+<!--});-->
+
+<!--var color = "White"-->
+
+<!--$( "#btnBlue" ).click(function() {-->
+<!--  color = "Blue"-->
+<!--});-->
+
+<!--$( "#btnGreen" ).click(function() {-->
+<!--  color = "Green"-->
+<!--});-->
+
+<!--$( "#btnYellow" ).click(function() {-->
+<!--  color = "Yellow"-->
+<!--});-->
+
+<!--$("table tr td").click(function(){-->
+<!--$(this).css("background-color", color);-->
+<!--});-->
+$( document ).ready(function() {
+    $('#PanelB').click(function() {
+    $( "tr" ).each(function( index ) {
+      var ID = $(this)..attr('id');
+      if(ID == '2221')
+      {
+         $(this).css('background-color', 'red');
+      }
+      else  if(ID == '2223')
+      {
+         $(this).css('background-color', 'blue');
+      }
+    });
+    });
+
+});
+
+ $( document ).ready(function() {
+    $('#panelB').click(function() {
+        alert(this.id);
+        j
+    });
+});

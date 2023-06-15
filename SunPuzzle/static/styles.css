@@ -1,0 +1,29 @@
+/* Vertical navbar for screen width > 50px */
+@media screen and (min-width:50px){
+    .navbar .container-fluid, .navbar-expand-md, .nav{
+        flex-direction:column;
+        align-items: flex-start;
+    }
+    .navbar{
+       /* width: 30%;*/
+       min-height: 100%;
+    }
+}
+
+.content{
+    text-align:center;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table th,
+table td {
+  padding: 10px;
+}
+
+html,body{
+margin:0;
+}

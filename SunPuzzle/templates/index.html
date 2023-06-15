@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+{% endblock %}
+
+{% block main %}
+<script>
+</script>
+
+<h1>HOW TO PLAY</h1>
+<p>The objective: Change the colours of each of the sun from grey to another colour by pressing a panel. Each colour must be unique.</p>
+
+<div class="row">
+    <div class="col">
+        <p >Current state:</p>
+
+        <table class="center panel-b" border="1">
+            {% for k,v in cur_state.items() %}
+            <tr>
+                <td id = {{k}} style="background-color: {{v}};">
+                    <img src="/static/{{v}}.png">
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="col">
+    <p>Choose a panel:</p>
+        <form action="/" method="POST">
+        <input class="btn btn-outline-secondary" type="submit" value="A" name="panel" id="panelA">
+        <input class="btn btn-outline-secondary" type="submit" value="B" name="panel" id="panelB">
+        <input class="btn btn-outline-secondary" type="submit" value="C" name="panel" id="panelC">
+        <input class="btn btn-outline-secondary" type="submit" value="D" name="panel" id="panelD">
+        <input class="btn btn-outline-secondary" type="submit" value="E" name="panel" id="panelE">
+        <input class="btn btn-outline-secondary" type="submit" value="F" name="panel" id="panelF">
+        <input class="btn btn-outline-secondary" type="submit" value="G" name="panel" id="panelG">
+        <input class="btn btn-outline-secondary" type="submit" value="H" name="panel" id="panelH">
+        <input class="btn btn-outline-secondary" type="submit" value="I" name="panel" id="panelI">
+        <input class="btn btn-outline-secondary" type="submit" value="J" name="panel" id="panelJ">
+        <input type="hidden" name="cur_state" value="{{ cur_state }}"/>
+        <input type="hidden" name="f_count" value="{{ f_count }}"/>
+        <br>
+        <br>
+            <p><b>Moves: {{movelist|length}}</b></p>
+            <p>
+                {% for move in movelist %}
+                    {{move}}<br>
+                {% endfor %}
+            </p>
+
+    </div>
+</div>
+{% endblock %}
